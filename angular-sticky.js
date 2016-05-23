@@ -1,6 +1,6 @@
 (function (namespace) {
 	// set sticky module and directive
-	angular.module(namespace, []).directive(namespace, function () {
+	angular.module(namespace, []).directive(namespace, ['$compile', function ($compile) {
 		return {
 			link: function (scope, angularElement, attrs) {
 				var
@@ -139,5 +139,5 @@
 				onscroll();
 			}
 		};
-	});
+	}]);
 })('sticky');
