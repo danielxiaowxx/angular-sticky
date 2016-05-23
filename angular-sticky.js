@@ -43,6 +43,7 @@
 
 					// replace element with wrapper containing element
 					wrapper.appendChild(element);
+					$compile(element)(scope);
 
 					if (parentNode) {
 						parentNode.insertBefore(wrapper, nextSibling);
